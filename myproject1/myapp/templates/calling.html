@@ -1,0 +1,51 @@
+<html>
+<head>
+<style>
+</style>
+</head>
+<body>
+<form method="POST" action="{% url 'calling1' %}">
+    {%csrf_token%}
+
+
+    
+            <div style="background-color:pink;width:75%;height:105%; border:2px solid">
+            <div style="font-size:100px"><center>callings-page</center></div>
+            <center>
+            <div style="background-color: white;width:76%;height:20px">
+        
+            
+            
+            <a href="{% url 'registration_html' %}" style=" text-decoration:none;">REGISTERFORM</a>&nbsp;
+            <a href="{% url 'data_page' %}" style=" text-decoration:none;">WALKINS</a>&nbsp;
+            <a href= "{% url 'calling' %}"style=" text-decoration:none;">CALLING</a>&nbsp;
+            <a href="{% url 'counselling' %}" style=" text-decoration:none;">COUNSELLING</a>&nbsp;
+            <a href="{% url 'join' %}" style=" text-decoration:none;">JOINING</a>&nbsp;
+            <a href="{% url 'student' %}" style=" text-decoration:none;">STUDENTS</a>&nbsp;
+		    <a href="{% url 'current' %}" style=" text-decoration:none;">CURRENTSTATUS</a>
+
+
+</div>
+
+</center>
+</br>
+</br>
+</br>
+
+
+<center>
+
+
+            <div style="background-color:white;width:75%;height:55%; border:2px solid">
+
+<h3>SOURCE</h3>
+<select style="width:550px;padding:10px;" name="SOURCE" ><option>default</option><option>website</option><option>raviteja</option><option>bargavi</option></select>
+
+<h3>DEMO_DATE</h3>
+<input style="width:550px;padding:10px;" type="date" name="DEMO_DATE" placeholder="dd-mm--yyyy">
+</center>
+
+<center><button style="background-color:pink">find</button></center>
+</div>
+</form>
+</html>

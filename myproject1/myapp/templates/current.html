@@ -1,0 +1,78 @@
+<html>
+<head>
+	<style type="text/css">
+		table,td,th{
+
+			border:2px solid;
+		}
+		table{
+
+			border-collapse:collapse;
+		}
+	</style>
+</head>
+<body>
+
+
+		
+				<div style="background-color:pink;width:100%;height:105%; border:2px solid">
+				<div style="font-size:100px"><center>CURRENT-PAGE</center></div>
+				
+				<center>
+						<div style="background-color: white;width:80%;height:20px">
+				
+				
+				<a href="{% url 'registration_html' %}" style=" text-decoration:none;">REGISTERFORM</a>&nbsp;
+				<a href="{% url 'data_page' %}" style=" text-decoration:none;">WALKINS</a>&nbsp;
+				<a href= "{% url 'calling' %}"style=" text-decoration:none;">CALLING</a>&nbsp;
+				<a href="{% url 'counselling' %}" style=" text-decoration:none;">COUNSELLING</a>&nbsp;
+				<a href="{% url 'join' %}" style=" text-decoration:none;">JOINING</a>&nbsp;
+				<a href="{% url 'student' %}" style=" text-decoration:none;">STUDENTS</a>&nbsp;
+		        <a href="{% url 'current' %}" style=" text-decoration:none;">CURRENTSTATUS</a>
+
+
+						</br>
+					</br>
+					</br>
+
+</center>
+	
+<table style="background-color:beige;">
+		<tr>
+                <td>NAME</td>
+                <td>COURSE</td>
+                <td>DATE_OF_JOINNING</td>
+                <td>DATE_OF_COMPLETION</td>
+				<td>COURSE_FEE</td>
+				<td>INSTRUCTOR</td>
+                <td>AADHAR_NO</td>
+                <td>MOBILE_NO</td>
+                <td>EMAIL</td>
+				<td>REMARKS</td>
+				<td>STATUS</td>
+				<td>COMPLETE</td>
+				<td>DELAY</td>
+				<td>DEAD</td>
+            </tr>
+			{% for i in details %}
+	<tr>
+				<td>{{i.NAME}}</td>
+                <td>{{i.COURSE}}</td>
+                <td>{{i.DATE_OF_JOINNING}}</td>
+                <td>{{i.DATE_OF_COMPLETION}}</td>
+				<td>{{i.COURSE_FEE}}</td>
+				<td>{{i.INSTRUCTOR}}</td>
+                <td>{{i.AADHAR_NO}}</td>
+                <td>{{i.MOBILE_NO}}</td>
+                <td>{{i.EMAIL}}</td>
+				<td>{{i.REMARKS}}</td>
+				<td>{{i.status}}</td>
+				<td style="background-color:burlywood"><a href="{% url 'complete' i.id %}">complete</a></td>
+				<td style="background-color:burlywood"><a href="{% url 'delay' i.id %}">delay</a></td>
+       			 <td  style="background-color:burlywood"><a href="{% url 'stop' i.id %}">dead</a></td>
+	</tr>
+	{% endfor%}
+</table>
+</body>
+
+</html>

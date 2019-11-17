@@ -1,0 +1,172 @@
+<html>
+<head>
+	<style type="text/css">
+		table,td,th{
+
+			border:2px solid;
+		}
+		table{
+
+			border-collapse:collapse;
+		}
+	</style>
+</head>
+<body>
+
+
+		
+				<div style="background-color:pink;width:100%;height:105%; border:2px solid">
+				<div style="font-size:50px"><center>STUDENTS-PAGE</center></div>
+				
+				<center>
+						<div style="background-color: white;width:76%;height:20px">
+				
+				
+				<a href="{% url 'registration_html' %}" style=" text-decoration:none;">REGISTERFORM</a>&nbsp;
+				<a href="{% url 'data_page' %}" style=" text-decoration:none;">WALKINS</a>&nbsp;
+				<a href= "{% url 'calling' %}"style=" text-decoration:none;">CALLING</a>&nbsp;
+				<a href="{% url 'counselling' %}" style=" text-decoration:none;">COUNSELLING</a>&nbsp;
+				<a href="{% url 'join' %}" style=" text-decoration:none;">JOINING</a>&nbsp;
+				<a href="{% url 'student' %}" style=" text-decoration:none;">STUDENTS</a>&nbsp;
+		        <a href="{% url 'current' %}" style=" text-decoration:none;">CURRENTSTATUS</a>
+
+
+						</br>
+					</br>
+					</br>
+
+
+					
+	<div style="font-size:65px"><center>completed students</center></div>
+				
+				
+
+						</br>
+					</br>
+					</br>
+
+
+
+
+					<table style="background-color:beige;">
+						<tr>
+								<td>NAME</td>
+								<td>COURSE</td>
+								<td>DATE_OF_JOINNING</td>
+								<td>DATE_OF_COMPLETION</td>
+								<td>COURSE_FEE</td>
+								<td>INSTRUCTOR</td>
+								<td>AADHAR_NO</td>
+								<td>MOBILE_NO</td>
+								<td>EMAIL</td>
+								<td>REMARKS</td>
+								<td>STATUS</td>
+							
+							</tr>
+					{% for i in details1 %}
+					<tr>
+								<td>{{i.NAME}}</td>
+								<td>{{i.COURSE}}</td>
+								<td>{{i.DATE_OF_JOINNING}}</td>
+								<td>{{i.DATE_OF_COMPLETION}}</td>
+								<td>{{i.COURSE_FEE}}</td>
+								<td>{{i.INSTRUCTOR}}</td>
+								<td>{{i.AADHAR_NO}}</td>
+								<td>{{i.MOBILE_NO}}</td>
+								<td>{{i.EMAIL}}</td>
+								<td>{{i.REMARKS}}</td>
+								<td>{{i.status}}</td>
+								
+					</tr>
+					{% endfor%}
+				</table>
+	<div style="font-size:65px"><center>inprocess students</center></div>
+				
+				
+						</br>
+					</br>
+					</br>
+
+
+
+
+	
+					<table style="background-color:beige;">
+						<tr>
+								<td>NAME</td>
+								<td>COURSE</td>
+								<td>DATE_OF_JOINNING</td>
+								<td>DATE_OF_COMPLETION</td>
+								<td>COURSE_FEE</td>
+								<td>INSTRUCTOR</td>
+								<td>AADHAR_NO</td>
+								<td>MOBILE_NO</td>
+								<td>EMAIL</td>
+								<td>REMARKS</td>
+								<td>STATUS</td>
+							
+							</tr>
+					{% for i in details2 %}
+					<tr>
+								<td>{{i.NAME}}</td>
+								<td>{{i.COURSE}}</td>
+								<td>{{i.DATE_OF_JOINNING}}</td>
+								<td>{{i.DATE_OF_COMPLETION}}</td>
+								<td>{{i.COURSE_FEE}}</td>
+								<td>{{i.INSTRUCTOR}}</td>
+								<td>{{i.AADHAR_NO}}</td>
+								<td>{{i.MOBILE_NO}}</td>
+								<td>{{i.EMAIL}}</td>
+								<td>{{i.REMARKS}}</td>
+								<td>{{i.status}}</td>
+								
+					</tr>
+					{% endfor%}
+				</table>
+<div style="font-size:65px"><center>discontinue students</center></div>
+				
+				
+						</br>
+					</br>
+					</br>
+
+
+
+
+	
+					<table style="background-color:beige;">
+						<tr>
+								<td>NAME</td>
+								<td>COURSE</td>
+								<td>DATE_OF_JOINNING</td>
+								<td>DATE_OF_COMPLETION</td>
+								<td>COURSE_FEE</td>
+								<td>INSTRUCTOR</td>
+								<td>AADHAR_NO</td>
+								<td>MOBILE_NO</td>
+								<td>EMAIL</td>
+								<td>REMARKS</td>
+								<td>STATUS</td>
+								<td>REJOIN</td>
+							</tr>
+					{% for i in details3 %}
+					<tr>
+								<td>{{i.NAME}}</td>
+								<td>{{i.COURSE}}</td>
+								<td>{{i.DATE_OF_JOINNING}}</td>
+								<td>{{i.DATE_OF_COMPLETION}}</td>
+								<td>{{i.COURSE_FEE}}</td>
+								<td>{{i.INSTRUCTOR}}</td>
+								<td>{{i.AADHAR_NO}}</td>
+								<td>{{i.MOBILE_NO}}</td>
+								<td>{{i.EMAIL}}</td>
+								<td>{{i.REMARKS}}</td>
+								<td>{{i.status}}</td>
+								<td><a href="{% url 'join' %}">rejoin</a></td>
+								
+					</tr>
+					{% endfor%}
+				</table>
+</body>
+</center>
+</html>

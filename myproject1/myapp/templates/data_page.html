@@ -1,0 +1,71 @@
+<!-- {{details}} -->
+<html>
+<head>
+	<style type="text/css">
+		table,td,th{
+
+			border:2px solid;
+		}
+		table{
+
+			border-collapse:collapse;
+		}
+	</style>
+</head>
+<body>
+
+
+		
+				<div style="background-color:pink;width:75%;height:105%; border:2px solid">
+				<div style="font-size:100px"><center>WALLKINS-PAGE</center></div>
+				
+				<center>
+						<div style="background-color: white;width:76%;height:20px">
+				
+				
+				<a href="{% url 'registration_html' %}" style=" text-decoration:none;">REGISTERFORM</a>&nbsp;
+				<a href="{% url 'data_page' %}" style=" text-decoration:none;">WALKINS</a>&nbsp;
+				<a href= "{% url 'calling' %}"style=" text-decoration:none;">CALLING</a>&nbsp;
+				<a href="{% url 'counselling' %}" style=" text-decoration:none;">COUNSELLING</a>&nbsp;
+				<a href="{% url 'join' %}" style=" text-decoration:none;">JOINING</a>&nbsp;
+				<a href="{% url 'student' %}" style=" text-decoration:none;">STUDENTS</a>&nbsp;
+		        <a href="{% url 'current' %}" style=" text-decoration:none;">CURRENTSTATUS</a>
+
+
+						</br>
+					</br>
+					</br>
+
+
+
+
+	
+<table style="background-color:beige;">
+		<tr>
+                <td>NAME</td>
+                <td>EMAIL</td>
+                <td>MOBILE</td>
+                <td>COURSE</td>
+                <td>SOURCE</td>
+                <td>LEAD_STATUS</td>
+                <td>DEMO_DATE</td>
+                <td>COUNSIER</td>
+                <td>REMARKS</td>
+            </tr>
+	{% for i in details %}
+	<tr>
+		<td>{{i.NAME}}</td>
+		<td>{{i.EMAIL}}</td>
+		<td>{{i.MOBILE}}</td>
+		<td>{{i.COURSE}}</td>
+		<td>{{i.SOURCE}}</td>
+		<td>{{i.LEAD_STATUS}}</td>
+		<td>{{i.DEMO_DATE}}</td>
+		<td>{{i.COUNSIER}}</td>
+		<td>{{i.REMARKS}}</td>
+	</tr>
+	{% endfor%}
+</table>
+</body>
+</center>
+</html>

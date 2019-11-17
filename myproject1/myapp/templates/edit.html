@@ -1,0 +1,24 @@
+<html>
+<head>
+<style>
+</style>
+</head>
+<body>
+<form method="POST" action="{% url 'update' details.id %}">
+    {%csrf_token%}
+<div style="background-color:pink;width:800px;height:70%; border:2px solid;padding:75px;" >
+<div style="font-size:30px;padding:5px;"><center>LEAD TRACKER</center></div>
+<div style="background-color:white;width:600px;height:55%; border:2px solid;padding:75px;">
+<center><h1>UPDATE-PAGE</h1></center>
+
+<h3>NAME</h3>
+    <input style="width:550px;padding:10px;" type="text" name="NAME" placeholder="Name of the candidate" value="{{details.NAME}}">
+<h3>DEMO_DATE</h3>
+<input style="width:550px;padding:10px;" type="date" name="DEMO_DATE" placeholder="dd-mm--yyyy" value="{{details.DEMO_DATE}}">
+
+<center><button style="background-color:pink">SUBMIT</button></center>
+</div>
+</div>
+</body>
+</form>
+</html>

@@ -1,0 +1,63 @@
+
+        <html>
+        <head>
+        <style>
+        </style>
+        </head>
+        <body>
+                <form method="POST">
+                        {%csrf_token%}
+        
+                        <div style="background-color:white;width:63.5%;height:20px;border:2px solid;">
+                                        <a href="{% url 'registration_html' %}" style=" text-decoration:none;">REGISTERFORM</a>&nbsp;
+                                        <a href="{% url 'data_page' %}" style=" text-decoration:none;">WALKINS</a>&nbsp;
+                                        <a href= "{% url 'calling' %}"style=" text-decoration:none;">CALLING</a>&nbsp;
+                                        <a href="{% url 'counselling' %}" style=" text-decoration:none;">COUNSELLING</a>&nbsp;
+                                        <a href="{% url 'join' %}" style=" text-decoration:none;">JOINING</a>&nbsp;
+                                        <a href="{% url 'student' %}" style=" text-decoration:none;">STUDENTS</a>&nbsp;
+		                        <a href="{% url 'current' %}" style=" text-decoration:none;">CURRENTSTATUS</a>
+        
+                        </div>
+        
+        
+        
+        
+        
+        <div style="background-color:pink;width:800px;height:200%; border:2px solid;padding:75px;" >
+        <div style="font-size:30px;padding:5px;"><center>LEAD TRACKER</center></div>
+        <div style="background-color:white;width:600px;height:90%; border:2px solid;padding:75px;">
+        <center><h1>JOINNING-PAGE</h1></center>
+        <h3>NAME</h3>
+        <input style="width:550px;padding:10px;" type="text" name="NAME" placeholder="Name of the candidate">
+        
+        <h3>COURSE</h3>
+        <select style="width:550px;padding:10px;" name="COURSE" ><option>default</option><option>python</option><option>django</option><option>datascience</option></select>
+        <h3>DATE_OF_JOINNING</h3>
+        <input style="width:550px;padding:10px;" type="date" name="DATE_OF_JOINNING" placeholder="dd-mm--yyyy">
+        <h3>DATE_OF_COMPLETION</h3>
+        <input style="width:550px;padding:10px;" type="date" name="DATE_OF_COMPLETION" placeholder="dd-mm--yyyy">
+        <h3>COURSE_FEE</h3>
+        <input style="width:550px;padding:10px;" type="text" name="COURSE_FEE" placeholder="enter instructor name">
+        <h3>INSTRUCTOR</h3>
+        <input style="width:550px;padding:10px;" type="text" name="INSTRUCTOR" placeholder="enter instructor name">
+        <h3>AADHAR_NO</h3>
+        <input style="width:550px;padding:10px;" type="text" name="AADHAR_NO" placeholder="enter adhar no">
+        <h3>MOBILE_NO</h3>
+        <input style="width:550px;padding:10px;" type="text" name="MOBILE_NO" placeholder="mobile number">
+        <h3>EMAIL</h3>
+        <input style="width:550px;padding:10px;" type="text" name="EMAIL" placeholder="youremail@gmail.com">
+        <h3> REMARKS</h3>
+        <input style="width:550px;padding:10px;" type="text" name = "REMARKS" placeholder="enter remarks"></br>
+        <h3>Status</h3><br>
+        <input style="width:550px;padding:10px;" type="text" name="status">
+        </br></br>
+
+
+        <center><button style="background-color:pink">SUBMIT</button></center>
+        </div>
+        </div>
+        </div>
+        </body>
+        </html>
+        </form>
+    

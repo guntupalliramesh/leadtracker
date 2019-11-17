@@ -1,0 +1,55 @@
+<form method="POST">
+	{%csrf_token%}
+<html>
+<head>
+<style>
+</style>
+</head>
+<body>
+
+
+		<div style="background-color:white;width:63.5%;height:20px;border:2px solid;">
+				<a href="{% url 'registration_html' %}" style=" text-decoration:none;">REGISTERFORM</a>&nbsp;
+				<a href="{% url 'data_page' %}" style=" text-decoration:none;">WALKINS</a>&nbsp;
+				<a href= "{% url 'calling' %}"style=" text-decoration:none;">CALLING</a>&nbsp;
+				<a href="{% url 'counselling' %}" style=" text-decoration:none;">COUNSELLING</a>&nbsp;
+				<a href="{% url 'join' %}" style=" text-decoration:none;">JOINING</a>&nbsp;
+				<a href="{% url 'student' %}" style=" text-decoration:none;">STUDENTS</a>&nbsp;
+		         <a href="{% url 'current' %}" style=" text-decoration:none;">CURRENTSTATUS</a>
+				
+
+		</div>
+
+
+
+
+
+<div style="background-color:pink;width:800px;height:150%; border:2px solid;padding:75px;" >
+<div style="font-size:30px;padding:5px;"><center>LEAD TRACKER</center></div>
+<div style="background-color:white;width:600px;height:85%; border:2px solid;padding:75px;">
+<center><h1>REGISTER-PAGE</h1></center>
+<h3>NAME</h3>
+<input style="width:550px;padding:10px;" type="text" name="NAME" placeholder="Name of the candidate">
+<h3>MOBILE</h3>
+<input style="width:550px;padding:10px;" type="text" name="MOBILE" placeholder="mobile number">
+<h3>EMAIL</h3>
+<input style="width:550px;padding:10px;" type="text" name="EMAIL" placeholder="youremail@gmail.com">
+<h3>COURSE</h3>
+<select style="width:550px;padding:10px;" name="COURSE" ><option>default</option><option>python</option><option>django</option><option>datascience</option></select>
+<h3>SOURCE</h3>
+<select style="width:550px;padding:10px;" name="SOURCE" ><option>default</option><option>website</option><option>raviteja</option><option>bargavi</option></select>
+<h3>LEAD_STATUS</h3>
+<select style="width:550px;padding:10px;" name="LEAD_STATUS" ><option>default</option><option>demo</option><option>callback</option><option>comeagain</option></select>
+<h3>DEMO_DATE</h3>
+<input style="width:550px;padding:10px;" type="date" name="DEMO_DATE" placeholder="dd-mm--yyyy">
+<h3>COUNSIER</h3>
+<input style="width:550px;padding:10px;" type="text" name="COUNSIER" placeholder="enter counsier name">
+<h3> REMARKS</h3>
+<input style="width:550px;padding:10px;" type="text" name = "REMARKS" placeholder="enter remarks"></br></br>
+<center><button style="background-color:pink">SUBMIT</button></center>
+</div>
+</div>
+</div>
+</body>
+</html>
+</form>
